@@ -3,10 +3,10 @@ kind: Kustomization
 
 labels:
 - pairs:
-    app.kubernetes.io/part-of: wac-project
+    app.kubernetes.io/part-of: wac-hospital
     app.kubernetes.io/name: ak-counseling
 
-namespace: wac-project
+namespace: wac-hospital
 
 resources:
 - cd.kustomization.yaml

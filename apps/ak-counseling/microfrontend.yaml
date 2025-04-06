@@ -4,5 +4,5 @@ metadata:
   name: ak-counseling
 spec:
   frontendClass: md-shell # default obsiahnutý v základe polyfea md-shell
-  service: http://ak-counseling.wac-project # referencia na službu odkiaľ sa má načítať modul
+  service: http://ak-counseling.wac-hospital # referencia na službu odkiaľ sa má načítať modul
   modulePath: build/wac-fe-xkoricansky.esm.js # cesta v rámci služby kde sa modul nachádza
