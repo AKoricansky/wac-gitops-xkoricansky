@@ -1,8 +1,8 @@
 apiVersion: polyfea.github.io/v1alpha1
 kind: MicroFrontend
 metadata:
-  name: ak-counseling
+  name: ak-ambulance-counseling-fe # meno microfrontend-u, ktoré sa použije v polyfea-md-shell
 spec:
   frontendClass: md-shell # default obsiahnutý v základe polyfea md-shell
-  service: http://ak-counseling.wac-hospital # referencia na službu odkiaľ sa má načítať modul
+  service: http://ak-ambulance-counseling-fe.wac-hospital # referencia na službu odkiaľ sa má načítať modul
   modulePath: build/wac-fe-xkoricansky.esm.js # cesta v rámci služby kde sa modul nachádza

@@ -1,22 +1,22 @@
 apiVersion: polyfea.github.io/v1alpha1
 kind: WebComponent
 metadata:
-  name: ak-counseling-link
+  name: ak-ambulance-counseling-fe-link
 spec:
   microFrontend: polyfea-md-shell # referencia na microfrontend, z ktorého sa načíta element
   element: polyfea-md-app # element, ktorý bude vložený na stránku
   attributes: # atribúty elementu polyfea-md-app
     - name: headline
-      value: Projekt xkoricansky
+      value: Ambulantné poradenstvo AK
     - name: short-headline
-      value: Projekt xkoricansky
+      value: Ambulantné poradenstvo AK
     - name: supporting-text
       value: |
-        Poskytuje možnosť získať poradenstvo
+        Poskytuje možnosť konzultovať s odborníkmi v oblasti ambulantného poradenstva
     - name: material-icon
       value: home_health
     - name: href # presmerovanie po kliknutí na element polyfea-md-app
-      value: ./ak-counseling
+      value: ./ak-ambulance-counseling-wl
   priority: 10
   displayRules: # pravidlá, kde sa má element vložiť v obálke
     - anyOf:

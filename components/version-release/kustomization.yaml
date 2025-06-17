@@ -1,6 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1alpha1
-kind: Component
-images:
-- name: akoricansky/project-counseling
-  newName: akoricansky/project-counseling
-  newTag: 1.0.0  #aktuálna verzia docker obrazu, ktorú chcete aby používatelia - cvičiaci - videli nasadenú

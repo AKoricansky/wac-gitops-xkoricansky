@@ -8,4 +8,4 @@ labels:
     app.kubernetes.io/part-of: wac-hospital
 
 resources:
-- ../../../apps/ak-counseling
+- ../../../apps/ak-ambulance-counseling-fe

@@ -1,0 +1,11 @@
+apiVersion: polyfea.github.io/v1alpha1
+kind: WebComponent
+metadata:
+  name: ak-ambulance-counseling-fe-content
+spec:
+  microFrontend: ak-ambulance-counseling-fe
+  element: ak-ambulance-counseling-wl-list
+  displayRules:
+    - allOf:
+      - context-name: main-content
+      - path: "^(\\.?/)?ak-ambulance-counseling-wl(/.*)?$"

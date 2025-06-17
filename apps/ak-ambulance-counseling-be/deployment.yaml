@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ak-ambulance-counseling-be-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+        pod: ak-ambulance-counseling-be-label
+  template:
+    metadata:
+      labels:
+        pod: ak-ambulance-counseling-be-label
+    spec:
+      containers:
+      - name: ak-ambulance-counseling-be-container
+        image: akoricansky/wac-project-counselling-be
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+        env:
+        - name: AMBULANCE_COUNSELING_API_MONGODB_HOST
+          value: "ak-mongodb"
+        - name: AMBULANCE_COUNSELING_API_MONGODB_PORT
+          value: "27017"
+        - name: AMBULANCE_COUNSELING_API_MONGODB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: username
+        - name: AMBULANCE_COUNSELING_API_MONGODB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: password
+        - name: AMBULANCE_COUNSELING_API_PORT
+          value: "8080"
+        resources:
+            requests:
+                memory: "64M"
+                cpu: "0.1"
+            limits:
+                memory: "512M"
+                cpu: "0.5"

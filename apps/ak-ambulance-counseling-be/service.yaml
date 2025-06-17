@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ak-ambulance-counseling-be
+spec:
+  selector:
+    pod: ak-ambulance-counseling-be-label
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: http
