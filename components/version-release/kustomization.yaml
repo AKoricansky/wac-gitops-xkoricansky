@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+images:
+- name: akoricansky/wac-project-counselling-fe
+  newName: akoricansky/wac-project-counselling-fe
+  newTag: latest #aktuálna verzia docker obrazu, ktorú chcete aby používatelia - cvičiaci - videli nasadenú
